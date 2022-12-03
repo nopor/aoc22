@@ -11,13 +11,13 @@ function getValue(char) {
 }
 
 const inArr = input.split('\n')
-for(let i = 0; i < inArr.length ; i + 3) {
-    inArr[i].forEach(v => {
-       [...v].forEach(c => {
+for(let i = 0; i < inArr.length; i+=3) {
+    [...inArr[i]].every(c => {
         if(inArr[i + 1].includes(c) && inArr[i + 2].includes(c)) {
-            result += getValue(c)
+            result += getValue(c);
+            return false;
         }
-       })
+        return true;
     });
 }
 
