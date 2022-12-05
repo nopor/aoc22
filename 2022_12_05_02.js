@@ -16,7 +16,7 @@ let stacks = {
 input.split('\n').forEach(v => {
   const parsed = v.split(' ');
   const length = stacks[parsed[3]].length;
-  const tM = [...stacks[parsed[3]].substring(length - Number(parsed[1]), length)].reverse().join("");
+  const tM = stacks[parsed[3]].substring(length - Number(parsed[1]), length);
   stacks[parsed[5]] = stacks[parsed[5]] + tM;
   stacks[parsed[3]] = stacks[parsed[3]].substring(0, length - Number(parsed[1]));
 });
