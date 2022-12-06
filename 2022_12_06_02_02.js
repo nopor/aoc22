@@ -24,7 +24,7 @@ function containsCharactersTwice(arr) {
     newIndex: internal.indexOf(Math.max(...internal))
   };
 }
-const padd = 4;
+const padd = 14;
 for(let i = 0; i < input.length; i++) {
   const message = [...input.substring(i, i + padd)];
   const check = containsCharactersTwice(message);
