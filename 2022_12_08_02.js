@@ -20,7 +20,6 @@ for (let i = 1; i < input.length - 1; i++) {
             }
         }
         tempDistance = left.reverse().findIndex(tree => tree >= t);
-
         const leftDistance = tempDistance >= 0 && tempDistance < left.length ? tempDistance + 1 : left.length;
         tempDistance = right.findIndex(tree => tree >= t);
         const rightDistance = tempDistance >= 0 && tempDistance < right.length ? tempDistance + 1 : right.length;
@@ -31,11 +30,6 @@ for (let i = 1; i < input.length - 1; i++) {
         
         const score = leftDistance * rightDistance * bottomDistance * topDistance;
         if (score > scenic) {
-            console.log(`index ${i} ${j}`)
-            console.log(topDistance)
-            console.log(rightDistance)
-            console.log(bottomDistance)
-            console.log(leftDistance)
             scenic = score;
         }
     }
